@@ -143,26 +143,40 @@ body {
 .border {
   border-radius: 10px;
 }
+.input {
+  border-radius: 3px;
+  background-color: #f5fbff;
+  padding: 15px;
+  border: 1px solid black;
+  margin: 5px 0;
+}
 .flex-display-row {
   display: flex;
   flex-direction: row;
 }
 .section-padding {
-  padding: 15px 25px;
+  padding: 35px 25px;
 }
 .header-text {
   font-size: 1.5rem;
   color: #3e3e3e;
-  padding: 10px 0 15px 0;
+  padding: 10px 0 15px 20px;
 }
 .content-text {
   color: #64757e;
   line-height: 3rem;
+  margin-right: 25px;
 }
 .content-props {
   width: 60%;
   text-align: right;
   padding: 0 15px;
+}
+.button {
+  border-radius: 3px;
+  padding: 7px 25px;
+  background: none;
+  border: 1px solid black;
 }
 body {
   background: #f0f0f0;
@@ -176,6 +190,31 @@ body {
   background: #f5fbff;
   box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
 }
+.container .btn {
+  padding: 10px;
+  width: 205px;
+  text-align: center;
+  background: #f0f0f0;
+  border: 1px solid #3a7b99;
+  border-radius: 10px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+.container .btn:hover {
+  opacity: 1;
+}
+.container .intro-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .intro-img {
+  text-align: center;
+  padding: 10px 0;
+}
+.container .intro-img img {
+  border-radius: 100%;
+}
 .container header {
   padding: 25px 0;
 }
@@ -188,30 +227,70 @@ body {
   font-weight: 700;
   text-decoration: none;
   color: #3e3e3e;
+  transition-duration: 0.15s;
+}
+.container a:hover {
+  color: #64757e;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 .container section {
   display: flex;
   flex-direction: row;
-  padding: 15px 25px;
+  padding: 35px 25px;
   justify-content: center;
 }
 .container section h2 {
   font-size: 1.5rem;
   color: #3e3e3e;
-  padding: 10px 0 15px 0;
+  padding: 10px 0 15px 20px;
 }
 .container section .content {
   color: #64757e;
   line-height: 3rem;
+  margin-right: 25px;
   width: 60%;
   text-align: right;
   padding: 0 15px;
+}
+.container section .form-container {
+  padding-right: 10px;
 }
 .container section .section-title {
   width: 25%;
 }
 .container hr {
   border: 0.03rem solid #3a7b99;
-  width: 75%;
+  width: 85%;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.container li {
+  line-height: 2rem;
+}
+.container input[type='text'] {
+  border-radius: 3px;
+  background-color: #f5fbff;
+  padding: 15px;
+  border: 1px solid black;
+  margin: 5px 0;
+}
+.container textarea {
+  border-radius: 3px;
+  background-color: #f5fbff;
+  padding: 15px;
+  border: 1px solid black;
+  margin: 5px 0;
+}
+.container input[type='submit'] {
+  border-radius: 3px;
+  padding: 7px 25px;
+  background: none;
+  border: 1px solid black;
+}
+footer {
+  width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #3e3e3e;
+  margin-bottom: 50px;
 }
