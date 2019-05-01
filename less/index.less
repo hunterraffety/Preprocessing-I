@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -136,4 +138,77 @@ table {
 html,
 body {
   height: 100%;
+}
+
+// Primary Styles
+
+// Variables
+// fonts
+@font-stack: 'Open Sans', sans-serif;
+
+// colors
+@primary-color: #f0f0f0;
+@secondary-color: #f5fbff;
+@primary-font-color: #3e3e3e;
+@secondary-font-color: #64757e;
+
+// mixins
+.border {
+  border-radius: 10px;
+}
+.flex-display-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.section-padding {
+  padding: 15px 25px;
+}
+
+.header-text {
+  font-size: 3rem;
+  color: @primary-font-color;
+  padding-bottom: 15px;
+}
+
+.content-text {
+  color: @secondary-font-color;
+  line-height: 3rem;
+}
+
+// desktop styling
+body {
+  background: @primary-color;
+  margin: 50px 0 0 0;
+}
+.container {
+  width: 960px;
+  margin: 25px auto;
+  .border;
+  font-family: @font-stack;
+  background: @secondary-color;
+  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
+
+  header {
+    padding: 25px 0;
+  }
+  nav {
+    .flex-display-row;
+    justify-content: space-around;
+  }
+
+  a {
+    text-decoration: none;
+    color: @primary-font-color;
+  }
+
+  section {
+    .section-padding;
+    h2 {
+      .header-text;
+    }
+    .content {
+      .content-text;
+    }
+  }
 }
