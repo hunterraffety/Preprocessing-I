@@ -151,6 +151,8 @@ body {
 @secondary-color: #f5fbff;
 @primary-font-color: #3e3e3e;
 @secondary-font-color: #64757e;
+@utility-color: #3a7b99;
+@bold: 700;
 
 // mixins
 .border {
@@ -166,14 +168,20 @@ body {
 }
 
 .header-text {
-  font-size: 3rem;
+  font-size: 1.5rem;
   color: @primary-font-color;
-  padding-bottom: 15px;
+  padding: 10px 0 15px 0;
 }
 
 .content-text {
   color: @secondary-font-color;
   line-height: 3rem;
+}
+
+.content-props {
+  width: 60%;
+  text-align: right;
+  padding: 0 15px;
 }
 
 // desktop styling
@@ -198,17 +206,32 @@ body {
   }
 
   a {
+    font-weight: @bold;
     text-decoration: none;
     color: @primary-font-color;
   }
 
   section {
+    .flex-display-row;
     .section-padding;
+    justify-content: center;
+
     h2 {
       .header-text;
     }
+
     .content {
       .content-text;
+      .content-props;
     }
+
+    .section-title {
+      width: 25%;
+    }
+  }
+  hr {
+    border: 0.03rem solid @utility-color;
+    width: 75%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
   }
 }
