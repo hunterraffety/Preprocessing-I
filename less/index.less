@@ -172,6 +172,11 @@ body {
   flex-direction: row;
 }
 
+.flex-display-column {
+  display: flex;
+  flex-direction: column;
+}
+
 .section-padding {
   padding: 35px 25px;
 }
@@ -182,16 +187,10 @@ body {
   padding: 10px 0 15px 20px;
 }
 
-.content-text {
+.content {
   color: @secondary-font-color;
-  line-height: 3rem;
+  line-height: 1;
   margin-right: 25px;
-}
-
-.content-props {
-  width: 60%;
-  text-align: right;
-  padding: 0 15px;
 }
 
 .button {
@@ -207,13 +206,19 @@ body {
   margin: 50px 0 0 0;
 }
 .container {
-  width: 960px;
+  width: 80%;
   margin: 25px auto;
   .border;
   font-family: @font-stack;
   background: @secondary-color;
   box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
 
+  .content-props {
+    width: 60%;
+    text-align: right;
+    padding: 0 15px;
+    line-height: 2;
+  }
   .btn {
     padding: 10px;
     width: 205px;
@@ -229,12 +234,6 @@ body {
     opacity: 1;
   }
 
-  .intro-title {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
   .intro-img {
     text-align: center;
     padding: 10px 0;
@@ -242,6 +241,11 @@ body {
 
   .intro-img img {
     border-radius: 100%;
+  }
+
+  .section-title {
+    width: 20%;
+    text-align: right;
   }
 
   header {
@@ -265,16 +269,16 @@ body {
   }
 
   section {
+    width: 100%;
     .flex-display-row;
     .section-padding;
-    justify-content: center;
 
     h2 {
       .header-text;
     }
 
     .content {
-      .content-text;
+      .content;
       .content-props;
     }
 
@@ -283,7 +287,6 @@ body {
     }
 
     .section-title {
-      width: 25%;
     }
   }
   hr {
@@ -293,7 +296,7 @@ body {
   }
 
   li {
-    line-height: 2rem;
+    line-height: 2;
   }
 
   input[type='text'] {
@@ -309,8 +312,87 @@ body {
   }
 }
 
+@media (max-width: 500px) {
+  .container {
+    width: 80%;
+
+    img {
+      max-width: 100%;
+    }
+    header {
+      width: 100%;
+      text-align: center;
+    }
+
+    section {
+      .flex-display-column;
+      padding: 0;
+      margin: 0;
+      .content {
+        width: 100%;
+        padding: 15px 25px;
+        text-align: justify;
+      }
+      .li-item {
+        padding: 15px 0;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      label,
+      input {
+        padding: 15px;
+      }
+    }
+
+    .btn {
+      display: none;
+    }
+
+    .section-title {
+      width: 100%;
+      text-align: center;
+    }
+
+    .header-text {
+      font-size: 10px;
+      width: 100%;
+      color: @primary-font-color;
+    }
+
+    .content {
+      padding: 20px;
+      margin: 0;
+      color: @secondary-font-color;
+      line-height: 1;
+      width: 100%;
+      h2 {
+        padding: 15px 0;
+      }
+      ul {
+        padding: 50px 0;
+      }
+    }
+
+    li {
+      line-height: 1;
+    }
+
+    nav {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav a {
+      padding: 15px 0;
+    }
+  }
+}
+
 footer {
-  width: 960px;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   font-family: @font-stack;
